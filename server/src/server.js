@@ -27,6 +27,9 @@ app.use(
   })
 );
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true, service: "mern-ecommerce-api" });
